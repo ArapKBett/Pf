@@ -1,0 +1,6 @@
+import requests
+response = requests.get("https://pumpportal.fun/api/create-wallet")
+data = response.json()
+print("Wallet Public Key:", data.get("publicKey"))
+print("Wallet Private Key:", data.get("privateKey"))
+print("API Key:", data.get("apiKey"))
